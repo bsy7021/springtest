@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 작성</title>
+</head>
+<body>
+    <h1>게시글 작성</h1>
+    <form action="/board/insert" method="post">
+        <label for="id">아이디:</label><br>
+        <input type="text" id="id" name="id" required><br><br>
+
+        <label for="title">제목:</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+
+        <label for="writer">작성자:</label><br>
+        <input type="text" id="writer" name="writer" required><br><br>
+
+        <label for="content">내용:</label><br>
+        <textarea id="content" name="content" rows="5" cols="40" required></textarea><br><br>
+
+        <button type="submit">등록</button>
+    </form>
+    <a href="/board/list">게시글 목록</a>
+</body>
+</html>

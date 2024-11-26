@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 상세보기</title>
+</head>
+<body>
+    <h1 th:text="'제목: ' + ${board.title}"></h1>
+    <p>작성자: <span th:text="${board.writer}"></span></p>
+    <p>작성일: <span th:text="${#dates.format(board.regDate, 'yyyy-MM-dd HH:mm')}"></span></p>
+    <hr>
+    <p th:text="${board.content}"></p>
+    <hr>
+    <a th:href="@{/board/update(no=${board.no})}">수정</a>
+    <a href="/board/list">게시글 목록</a>
+</body>
+</html>
